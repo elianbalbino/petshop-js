@@ -79,8 +79,23 @@ const adicionarPet = (nome,tipo,idade,raca, peso, tutor, vacinado) => {
     pets.push (pet)
 }
 
+const darBanhoPet = (pet) => {
+    pet.servicos.push(`${pet.nome} está de banho tomado!`)
 
+}
+
+const tosarPet = (pet) =>{
+    pet.servicos.push (`${pet.nome} está com cabelinho na régua`)
+}
+
+const apararUnhasPet = (pet) => {
+    pet.servicos.push (`${pet.nome} está de unhas aparadas!`)
+}
 
 //listarPets();
 //vacinarPet(pets[2])
-campanhaVacinacao()
+//campanhaVacinacao()
+darBanhoPet (pets[0])
+tosarPet (pets[0])
+apararUnhasPet (pets[0])
+console.log(pets[0])
