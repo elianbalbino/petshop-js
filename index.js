@@ -1,3 +1,4 @@
+const moment = require ('moment')
 let nomePetshop = "PETSHOP JS";
 
 let pets = [
@@ -80,16 +81,25 @@ const adicionarPet = (nome,tipo,idade,raca, peso, tutor, vacinado) => {
 }
 
 const darBanhoPet = (pet) => {
-    pet.servicos.push(`${pet.nome} está de banho tomado!`)
+    let dataHoje = moment().format('DD-MM-YYYY')
+    pet.servicos.push({'Serviço' : "Banho",
+    Data: dataHoje
+})
 
 }
 
 const tosarPet = (pet) =>{
-    pet.servicos.push (`${pet.nome} está com cabelinho na régua`)
+    let dataHoje = moment().format('DD-MM-YYYY')
+    pet.servicos.push({'Serviço' : "Tosa",
+    Data: dataHoje
+})
 }
 
 const apararUnhasPet = (pet) => {
-    pet.servicos.push (`${pet.nome} está de unhas aparadas!`)
+    let dataHoje = moment().format('DD-MM-YYYY')
+    pet.servicos.push({'Serviço' : "Aparou unhas",
+    Data: dataHoje
+})
 }
 
 //listarPets();
@@ -99,3 +109,4 @@ darBanhoPet (pets[0])
 tosarPet (pets[0])
 apararUnhasPet (pets[0])
 console.log(pets[0])
+//console.log (moment().format())
