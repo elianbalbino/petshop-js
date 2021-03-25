@@ -1,62 +1,73 @@
-const nomePetshop = "PETSHOP JS";
+let nomePetshop = "PETSHOP JS";
 
 let pets = [
     {
-    nome: 'Molly',
-    tipo: 'cachorro',
-    idade: 2,
-    raca: 'Maltes',
-    peso: 3,
-    tutor: 'Gabriela',
-    contato: "(81) 8808-8808",
-    vacinado: true,
-    servicos: ['banho','tosa']
-},
-{
-    nome: 'Malbec',
-    tipo: 'cachorro',
-    idade: 1,
-    raca: 'Maltes',
-    peso: 2,
-    tutor: 'Gabriela',
-    contato: "(81) 8808-8808",
-    vacinado: true,
-    servicos: ['banho','tosa']
-},
-{
-    nome: 'Rex',
-    tipo: 'cachorro',
-    idade: 5,
-    raca: 'Vira-lata',
-    peso: 5,
-    tutor: 'Elian',
-    contato: "(81) 8505-8505",
-    vacinado: true,
-    servicos: ['banho','vacina']
-},
+        nome: 'Molly',
+        tipo: 'cachorro',
+        idade: 2,
+        raca: 'Maltes',
+        peso: 4,
+        tutor: 'Gabriela',
+        vacinado: false,
+        servicos: ['banho', 'tosa']
+    },
+    {
+        nome: 'Malbec',
+        tipo: 'cachorro',
+        idade: 2,
+        raca: 'Maltes',
+        peso: 3,
+        tutor: 'Gabriela',
+        vacinado: false,
+        servicos: ['banho', 'tosa']
+    },
+    {
+        nome: 'Rex',
+        tipo: 'cachorro',
+        idade: 5,
+        raca: 'Vira-lata',
+        peso: 10,
+        tutor: 'Elian',
+        vacinado: false,
+        servicos: ['banho', 'vacinar']
+    },
 ];
 
-const listarPets = () => {
-    for(let pet of pets){
-        exibirPet (pet)
-          }
-  }
-
-const vacinarPet = (pet) =>{
-        if (pet.vacinado == false){
-            pet.vacinado = true
-        }
-        exibirPet (pet)
- 
-}
-
+// 
 const exibirPet = (pet) => {
-    console.log( console.log(`Nome do Cachorro: ${pet.nome}
+    console.log(`Nome: ${pet.nome}
     Idade: ${pet.idade}
     Tipo: ${pet.tipo}
     Raca: ${pet.raca}
-    Vacinado: ${pet.vacinado}`))
+    Vacinado: ${pet.vacinado}`)
+}
+const listarPets = () => {
+   
+    for(let pet of pets){
+        exibirPet(pet)
+    }
 }
 
+const vacinarPet = (pet) => {
+    
+    if(pet.vacinado == false){
+        pet.vacinado = true
+        exibirPet(pet)
+        return 1
+    }
+}
+
+const campanhaVacinacao = (pet) => {
+    let vacinados = 0
+    for (pet of pets){
+        vacinados += vacinarPet(pet)
+    }
+    console.log(vacinados)
+}
+
+
+
+
 //listarPets();
-vacinarPet(pets[2])
+//vacinarPet(pets[2])
+campanhaVacinacao()
