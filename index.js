@@ -65,6 +65,19 @@ const campanhaVacinacao = (pet) => {
     console.log(vacinados)
 }
 
+const adicionarPet = (nome,tipo,idade,raca, peso, tutor, vacinado) => {
+    let pet = {
+        nome: nome,
+        tipo: tipo,
+        idade: idade,
+        raca: raca,
+        peso: peso,
+        tutor: tutor,
+        vacinado : vacinado,
+        servicos: []
+    }
+    pets.push (pet)
+}
 
 
 
