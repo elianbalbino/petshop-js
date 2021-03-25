@@ -38,14 +38,25 @@ let pets = [
 
 const listarPets = () => {
     for(let pet of pets){
-        // template string
-      console.log(`${pet.nome},${pet.idade},${pet.tipo},${pet.raca}`);
+        exibirPet (pet)
           }
   }
 
-  listarPets();
-// console.log(pet);
+const vacinarPet = (pet) =>{
+        if (pet.vacinado == false){
+            pet.vacinado = true
+        }
+        exibirPet (pet)
+ 
+}
 
+const exibirPet = (pet) => {
+    console.log( console.log(`Nome do Cachorro: ${pet.nome}
+    Idade: ${pet.idade}
+    Tipo: ${pet.tipo}
+    Raca: ${pet.raca}
+    Vacinado: ${pet.vacinado}`))
+}
 
-
-
+//listarPets();
+vacinarPet(pets[2])
