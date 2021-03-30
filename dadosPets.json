@@ -1,0 +1,54 @@
+{
+  "pets": [
+    {
+      "nome": "Molly",
+      "tipo": "cachorro",
+      "idade": 2,
+      "raca": "Maltes",
+      "peso": 4,
+      "tutor": "Gabriela",
+      "vacinado": false,
+      "servicos": ["banho", "tosa"]
+    },
+    {
+      "nome": "Malbec",
+      "tipo": "cachorro",
+      "idade": 2,
+      "raca": "Maltes",
+      "peso": 3,
+      "tutor": "Gabriela",
+      "vacinado": false,
+      "servicos": ["banho", "tosa"]
+    },
+    {
+      "nome": "Rex",
+      "tipo": "cachorro",
+      "idade": 5,
+      "raca": "Vira-lata",
+      "peso": 10,
+      "tutor": "Elian",
+      "vacinado": false,
+      "servicos": ["banho", "tosa"]
+    },
+    {
+      "nome": "Romarinho",
+      "tipo": "cachorro",
+      "idade": 3,
+      "raca": "American",
+      "peso": 28,
+      "tutor": "Bruno",
+      "vacinado": true,
+      "servicos": []
+    },
+    {
+      "nome": "Romarinho",
+      "tipo": "cachorro",
+      "idade": 3,
+      "raca": "American",
+      "peso": 28,
+      "tutor": "Bruno",
+      "vacinado": true,
+      "servicos": []
+    }
+  ]
+}
