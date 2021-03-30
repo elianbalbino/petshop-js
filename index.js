@@ -51,19 +51,38 @@ const exibirPet = (pet) => {
     Raca: ${pet.raca}
     Vacinado: ${pet.vacinado}`);
 };
-const listarPets = () => {
-  dadosPets.pets.forEach((pet) => {
-    console.log(
-      `${pet.nome}, ${pet.idade} anos, ${pet.tipo}, ${pet.raca}, ${
-        pet.vacinado ? 'vacinado' : 'não vacinado'
-      }`
-    );
+const listarPets = (pet) => {
+  let { nome, raca, tutor } = pet;
+  return `Tutor: ${tutor}
+  Raca: ${raca}
+  Pet: $ {nome}`;
+};
 
-    pet.servicos.forEach((servico) => {
-      console.log(`${servico.data} - ${servico.nome}`);
-    });
+const filtrarRaca = (nomeRaca) => {
+  let petsRaca = dadosPets.pets.filter((pet) => {
+    return pet.raca == nomeRaca;
+  });
+
+  console.log(`Pets da raca ${nomeRaca}:`);
+  petsRaca.forEach((pet) => {
+    console.log(`${pet.nome} - ${pet.tipo}`);
   });
 };
+
+filtrarRaca('Maltes');
+
+//   dadosPets.pets.forEach((pet) => {
+//     console.log(
+//       `${pet.nome}, ${pet.idade} anos, ${pet.tipo}, ${pet.raca}, ${
+//         pet.vacinado ? 'vacinado' : 'não vacinado'
+//       }`
+//     );
+
+//     pet.servicos.forEach((servico) => {
+//       console.log(`${servico.data} - ${servico.nome}`);
+//     });
+//   });
+// };
 
 const vacinarPet = (pet) => {
   if (!pet.vacinado) {
@@ -207,7 +226,7 @@ const clientePremium = (pet) => {
 //listarPets();
 //console.log(pets[0])
 //console.log(clientePremium(dadosPets.pets[0]));
-console.log(buscarPet('Malbec'));
+// console.log(buscarPet('Malbec'));
 
 // adicionarPet ({
 //     "nome" : "Romarinho",
